@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // POST endpoint for translation
-app.post('/translate', async (req, res) => {
+app.post('/', async (req, res) => {
     const { text } = req.body;
     if (!text ) {
         return res.status(400).json({ error: 'Missing required parameters: text' });
